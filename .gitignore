@@ -48,6 +48,10 @@ playground.xcworkspace
 
 .build/
 
+# CocoaPods - Refactored to standalone file
+Pods/
+Podfile.lock
+
 # CocoaPods
 #
 # We recommend against adding the Pods directory to your .gitignore. However
