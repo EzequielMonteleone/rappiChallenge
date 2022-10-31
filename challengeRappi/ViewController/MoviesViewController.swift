@@ -26,7 +26,7 @@ class MoviesViewController: BaseViewController, UITableViewDelegate, UITableView
         viewModel.fetchMoviesUpcoming {
             self.loadTopicMovies()
         } completeWithError: { error in
-            print(error ?? "")
+            print("Error fetching next movies")
             self.loadTopicMovies()
         }
     }
@@ -35,7 +35,7 @@ class MoviesViewController: BaseViewController, UITableViewDelegate, UITableView
         viewModel.fetchMoviesTopRated {
             self.loadRecommendedForYou()
         } completeWithError: { error in
-            print(error ?? "")
+            print("Error fetching topic movies")
             self.loadRecommendedForYou()
         }
     }
@@ -45,7 +45,7 @@ class MoviesViewController: BaseViewController, UITableViewDelegate, UITableView
             self.tableView.reloadData()
             self.hideLoading()
         } completeWithError: { error in
-            print(error ?? "")
+            print("Error fetching recommended movies")
             self.tableView.reloadData()
             self.hideLoading()
         }
